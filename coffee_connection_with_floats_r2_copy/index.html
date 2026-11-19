@@ -151,22 +151,55 @@
         #contact {
             clear: both;
         }
+
+        /* Fixed banner: stays at the top while the page scrolls */
+        #banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgb(33, 16, 11);
+            z-index: 100;
+        }
+
+        /* Push the figure down so the banner doesn't cover the image */
+        figure {
+            margin-top: 200px;
+        }
+
+        /* Text overlay: product is the positioning context */
+        .product {
+            position: relative;
+        }
+
+        .product p:last-of-type {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            padding: 10px;
+            color: white;
+            background: rgba(33, 16, 11, 0.7);
+        }
     </style>
 </head>
 
 <body>
-    <header class="center">
-        <h1>Coffee Connection</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="banner">
+        <header class="center">
+            <h1>Coffee Connection</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
     <figure class="center">
         <img src="images/people.png" alt="people drinking coffee">
     </figure>
